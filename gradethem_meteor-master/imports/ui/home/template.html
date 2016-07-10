@@ -1,0 +1,46 @@
+<template name="Home">
+  <!-- Jumbotron Header -->
+  <header class="jumbotron hero-spacer">
+      <h1>¡Una calurosa bienvenida!</h1>
+      <p>Esta es una página donde se demuestra la utilización del API de <a href="https://www.stripe.com" target="_blank">stripe</a> (Sitio aceptar pagos en línea) a través de <a href="https://www.meteor.com" target="_blank">Meteor JS</a> como plataforma de desarrollo.</p>
+      <p><a class="btn btn-primary btn-raised">¡Registrate!</a>
+      </p>
+  </header>
+  <hr>
+  <!-- Title -->
+  <div class="row">
+      <div class="col-lg-12">
+          <h3>Últimos artículos</h3>
+      </div>
+  </div>
+  <!-- /.row -->
+
+  <!-- Items -->
+  <div class="text-center">
+    <div class="row">
+      <div class="col-xs-12 grid">
+        {{#each items}}
+          <div class="grid-item">
+            {{> Item}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="Item">
+  <div class="col-md-3 col-sm-6 hero-feature">
+      <div class="thumbnail">
+          <img src="http://placehold.it/800x500" alt="">
+          <div class="caption">
+              <h3>{{title}}</h3>
+              <p>{{description}}.</p>
+              <p>
+                  <a href="#" class="btn btn-primary btn-raised">Buy Now!</a>
+                  <a href="#" class="btn btn-default btn-raised">More Info</a>
+              </p>
+          </div>
+      </div>
+  </div>
+</template>
